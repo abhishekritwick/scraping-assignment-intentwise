@@ -184,15 +184,17 @@ def scrape_page():
     write_to_file(result_list)
 
 
-def main(search_term):
+def main(search_term, scrape_existing_page):
     search = str(search_term)
-    browser = Browser()
-    browser.open_website()
-    browser.navigate_to_search_page(search)
-    browser.save_HTML()
+    if not scrape_existing_page:
+        browser = Browser()
+        browser.open_website()
+        browser.navigate_to_search_page(search)
+        browser.save_HTML()
     scrape_page()
 
 
 if __name__ == "__main__":
     search_term = input("What would you like to search on amazon today?\n")
-    main(search_term)
+    scrape_existing_page = False
+    main(search_term, scrape_existing_page)
