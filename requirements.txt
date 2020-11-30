@@ -1,0 +1,7 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+pep8==1.7.1
+psycopg2-binary==2.8.6
+selenium==3.141.0
+soupsieve==2.0.1
+urllib3==1.26.2
